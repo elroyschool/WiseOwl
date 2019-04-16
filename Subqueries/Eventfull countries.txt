@@ -1,0 +1,4 @@
+select CountryName
+from tblCountry
+where (select Count(EventID) from tblEvent where tblCountry.CountryID = tblEvent.CountryID) > 8
+order by CountryName;

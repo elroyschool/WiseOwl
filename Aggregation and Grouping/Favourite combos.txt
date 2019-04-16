@@ -1,0 +1,7 @@
+select tblAuthor.AuthorName, tblDoctor.DoctorName, COUNT(tblEpisode.EpisodeId) [Episodes]
+from tblEpisode
+INNER JOIN tblAuthor ON tblEpisode.AuthorId = tblAuthor.AuthorId
+INNER JOIN tblDoctor ON tblDoctor.DoctorId = tblEpisode.DoctorId
+group by tblAuthor.AuthorName, tblDoctor.DoctorName
+having COUNT(tblEpisode.EpisodeId) > 5
+order by [Episodes] desc;

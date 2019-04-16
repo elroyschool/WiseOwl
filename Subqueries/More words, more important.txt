@@ -1,0 +1,3 @@
+select EventName
+from tblEvent
+where LEN(EventName) > (select AVG(LEN(EventName)) from tblEvent);

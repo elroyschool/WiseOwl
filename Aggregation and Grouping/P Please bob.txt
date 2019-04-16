@@ -1,0 +1,4 @@
+SELECT LEFT(tblCategory.CategoryName, 1) [Category initial], COUNT(tblEvent.EventID) [Number of Events] , CAST(AVG(LEN(tblEvent.EventName))AS decimal(10,2)) [Average event name length]
+FROM tblEvent
+INNER JOIN tblCategory ON tblCategory.CategoryID = tblEvent.CategoryID
+group by LEFT(tblCategory.CategoryName, 1); 

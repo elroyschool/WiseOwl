@@ -1,0 +1,5 @@
+select tblAuthor.AuthorName, tblEpisode.Title, tblEpisode.EpisodeType 
+from tblEpisode 
+INNER JOIN tblAuthor ON tblAuthor.AuthorId = tblEpisode.AuthorId
+Where EpisodeType  LIKE '%special%' 
+ORDER BY tblEpisode.Title;

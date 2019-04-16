@@ -1,0 +1,8 @@
+select CountryName, 
+Case when ContinentID = 1 or ContinentID = 3 then 'Eurasia'
+when ContinentID = 1 or ContinentID = 3 then 'Americas'
+when ContinentID = 5 or ContinentID = 6 then 'Somewhere hot'
+when ContinentID = 2 or ContinentID = 4 then 'Somewhere Cold'
+else 'Somewhere else' end [CountryLocation]
+from tblCountry
+order by [CountryLocation] desc;

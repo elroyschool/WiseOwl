@@ -1,0 +1,4 @@
+select co.CountryName, ev.EventName
+from tblCountry as co
+FULL OUTER JOIN tblEvent as ev ON ev.CountryID = co.CountryID
+WHERE ev.EventName IS NULL;

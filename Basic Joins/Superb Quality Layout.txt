@@ -1,0 +1,6 @@
+
+SELECT
+tblCountry.CountryName AS Country, tblEvent.EventName AS [What happened], tblEvent.EventDate AS [When happened]
+FROM tblCountry
+INNER JOIN tblEvent ON cy.CountryID = ev.CountryID
+ORDER BY [When happened]

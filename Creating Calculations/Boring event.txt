@@ -1,0 +1,5 @@
+select EventName, case when EventName LIKE '[A,E,I,O,U]%[A,E,I,O,U]' then 'Begins and ends with vowel' 
+when left(EventName, 1) = right(EventName, 1) then 'Same letter' end [Verdict]
+from tblEvent
+where EventName LIKE '[A,E,I,O,U]%[A,E,I,O,U]'
+OR left(EventName, 1) = right(EventName, 1);

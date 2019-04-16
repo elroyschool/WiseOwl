@@ -1,0 +1,3 @@
+select EventName, EventDate, FORMAT(EventDate, 'dd/MM/yyyy') [UsingFormat], CONVERT(varchar, EventDate, 103) [UsingConvert]
+from tblEvent
+where YEAR(EventDate) = 2000;

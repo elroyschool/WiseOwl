@@ -1,0 +1,3 @@
+select EventName, EventDate, DATEDIFF(day, EventDate, '2000/08/14') [Date offset], ABS(DATEDIFF(day, EventDate, '2000/08/14')) [Date difference]
+from tblEvent
+order by [Date difference];

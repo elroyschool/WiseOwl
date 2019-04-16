@@ -1,0 +1,5 @@
+select CategoryName, COUNT(tblEvent.CategoryID) [Number of Events]
+from tblCategory
+INNER JOIN tblEvent ON tblCategory.CategoryID = tblEvent.CategoryID
+Group by tblCategory.CategoryName
+order by [Number of Events] desc;

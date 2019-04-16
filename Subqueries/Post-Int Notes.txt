@@ -1,0 +1,5 @@
+select EventName, EventDate, tblCountry.CountryName
+from tblEvent
+INNER JOIN tblCountry ON tblCountry.CountryID = tblEvent.CountryID
+where EventDate > (select MAX(EventDate) from tblEvent where CountryID = 21)
+order by EventDate desc;

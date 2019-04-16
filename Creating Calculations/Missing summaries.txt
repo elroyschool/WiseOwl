@@ -1,0 +1,6 @@
+select Continentid, continentName, Summary,
+ISNULL(Summary, 'No Summary') AS 'Using IsNull',
+COALESCE(Summary, 'No Summary') AS 'Using isCoalesce',
+CASE when Summary is null then 'No Summary'
+else Summary end AS 'Using Case'
+from tblContinent;

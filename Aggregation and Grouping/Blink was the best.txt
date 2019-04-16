@@ -1,0 +1,5 @@
+select tblAuthor.AuthorName, COUNT(tblEpisode.EpisodeId) [Episodes], MIN(tblEpisode.EpisodeDate) [Earliest date], MAX(tblEpisode.EpisodeDate) [Latest date]
+from tblEpisode
+INNER JOIN tblAuthor ON tblAuthor.AuthorId = tblEpisode.AuthorId
+group by tblAuthor.AuthorName
+order by [Episodes] desc;

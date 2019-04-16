@@ -1,0 +1,4 @@
+select tblEvent.EventName + ' (category ' + CAST(tblCategory.CategoryID AS varchar) + ')'[Event (category)], tblEvent.EventDate
+from tblEvent
+INNER JOIN tblCategory ON tblEvent.CategoryID = tblCategory.CategoryID
+WHERE tblEvent.CountryID = 1;

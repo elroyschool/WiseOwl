@@ -1,0 +1,4 @@
+select doc.DoctorName, ep.Title
+From tblDoctor as doc
+INNER JOIN tblEpisode as ep ON doc.DoctorId = ep.DoctorId
+WHERE YEAR(ep.EpisodeDate) = '2010';
